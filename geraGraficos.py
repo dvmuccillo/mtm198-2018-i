@@ -5,10 +5,10 @@ import math
 
 def sequencia(formula, max, label_sequencia):
     sequencia = []
-    for i in range(1,max):
-        sequencia.append(math.pow(formula,i))
+    for i in range(max):
+        sequencia.append(math.pow(formula,(i+1)))
 
-    x = 10 * np.array(range(len(sequencia)))
+    x = 1 + np.array(range(max))
 
     plt.plot(x, sequencia, 'go', label=label_sequencia)  # green bolinha
     #   plt.plot(x, data1, 'k:', color='orange')  # linha pontilha orange
